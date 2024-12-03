@@ -48,3 +48,30 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+
+
+// Liste des cartes
+const cards = [
+    { id: 1, name: "Ping", rarity: "commune", image: "Images/Image_Ping.png" },
+    { id: 2, name: "Pong", rarity: "commune", image: "Images/Image_Pong.png" },
+    { id: 3, name: "Ping V", rarity: "V", image: "Images/Image_Ping_V.png" },
+    { id: 4, name: "Ping V Gold", rarity: "Gold", image: "Images/Image_Ping_V_Gold.png" },
+    { id: 5, name: "Salamalek", rarity: "commune", image: "Images/Image_Salamalek.png" },
+    { id: 4, name: "Eugene Malice", rarity: "rare", image: "Images/Image_Eugene_Malicieuxd.png" }
+];
+
+// Fonction pour générer un booster aléatoire (5 cartes)
+function generateBooster() {
+    const shuffled = [...cards].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, 5);
+}
+
+// Boosters de départ
+const boosters = {
+    left: generateBooster(),
+    center: generateBooster(),
+    right: generateBooster(),
+};
+
