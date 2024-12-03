@@ -1,24 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeu PWA</title>
+    <title>MonJeuPWA</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div id="logo">
-            <!-- Laisser vide pour le moment -->
-            <h1>PokESIEE</h1>
+<div id="app-container">
+    <div id="app-content">
+        <body>
+    <!-- Première page : logo + boutons -->
+    <section id="main-buttons">
+        <img id="logo" src="Images/PokESIEE_Logo.png" alt="Logo">
+        <button id="login-button">Se connecter</button>
+        <button id="signup-button">S'inscrire</button>
+    </section>
+
+    <!-- Home page -->
+    <section id="home-page" style="display: none;">
+        <div id="user-icon">
+            <img src="https://via.placeholder.com/50" alt="Icône utilisateur">
         </div>
-    </header>
-    <main>
-        <div id="main-buttons">
-            <button id="login-btn">Se connecter</button>
-            <button id="signup-btn">S'inscrire</button>
+        <div id="boosters">
+            <img id="booster-left" src="Images/Image_Booster_Lea.png" alt="Booster gauche">
+            <img id="booster-center" src="Images/Image_Booster_Lea.png" alt="Booster central">
+            <img id="booster-right" src="Images/Image_Booster_Lea.png" alt="Booster droit">
         </div>
-    </main>
+        <div id="booster-controls">
+            <div id="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <button id="action-btn">Accélérer</button>
+        </div>
+        <div id="menu-buttons">
+            <button id="decks-btn">Decks</button>
+            <button id="pokedex-btn">Pokédex</button>
+        </div>
+    </section>
+    
+
     <script src="script.js"></script>
 </body>
+</div>
+</div>
 </html>
