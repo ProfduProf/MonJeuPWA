@@ -52,12 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Liste des cartes (même structure que précédemment)
 const cards = [
-    { id: 1, name: "Ping", rarity: "commune", image: "Images/Image_Ping.png" },
-    { id: 2, name: "Pong", rarity: "commune", image: "Images/Image_Pong.JPG" },
-    { id: 3, name: "Ping V", rarity: "V", image: "Images/Image_Ping_V.JPG" },
-    { id: 4, name: "Salamalek", rarity: "commune", image: "Images/Image_Salamalek.JPG" },
-    { id: 5, name: "Flop Man", rarity: "rare", image: "Images/Image_Eugene_Malicieux.JPG" },
-    { id: 6, name: "Ping V Gold", rarity: "Gold", image: "Images/Image_Ping_V_Gold.JPG" },
+    { id: 1, name: "Ping", rarity: "commune", image: "Image_Ping.png" },
+    { id: 2, name: "Pong", rarity: "commune", image: "Image_Pong.JPG" },
+    { id: 3, name: "Ping V", rarity: "V", image: "Image_Ping_V.JPG" },
+    { id: 4, name: "Salamalek", rarity: "commune", image: "Image_Salamalek.JPG" },
+    { id: 5, name: "Flop Man", rarity: "rare", image: "Image_Eugene_Malicieux.JPG" },
+    { id: 6, name: "Ping V Gold", rarity: "Gold", image: "Image_Ping_V_Gold.JPG" },
 ];
 
 
@@ -110,7 +110,7 @@ function displayPokedex() {
             rarityCount[card.rarity]++; // Incrémenter la rareté
         } else {
             cardElement.classList.add("unowned");
-            cardElement.innerHTML = `<img src="Images/default-card.png" alt="Carte inconnue"><p>???</p>`;
+            cardElement.innerHTML = `<img src="default-card.png" alt="Carte inconnue"><p>???</p>`;
         }
 
         pokedexContainer.appendChild(cardElement);
