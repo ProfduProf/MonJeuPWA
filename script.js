@@ -53,12 +53,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // Liste des cartes (même structure que précédemment)
 const cards = [
     { id: 1, name: "Ping", rarity: "commune", image: "Image_Ping.png" },
-    { id: 2, name: "Pong", rarity: "commune", image: "Image_Pong.jpg" },
-    { id: 3, name: "Ping V", rarity: "V", image: "Image_Ping_V.jpg" },
-    { id: 4, name: "Salamalek", rarity: "commune", image: "Image_Salamalek.jpg" },
-    { id: 5, name: "Flop Man", rarity: "rare", image: "Image_Eugene_Malicieux.jpg" },
-    { id: 6, name: "Amin sans e Vmax", rarity: "Vmax", image: "Image_Amin_sans_e_Vmax.jpg" },
-    { id: 7, name: "Ping V Gold", rarity: "Gold", image: "Image_Ping_V_Gold.jpg" },
+    { id: 2, name: "Pong", rarity: "commune", image: "Image_Pong.png" },
+    { id: 3, name: "Ping V", rarity: "V", image: "Image_Ping_V.png" },
+    { id: 4, name: "Salamalek", rarity: "commune", image: "Image_Salamalek.png" },
+    { id: 5, name: "Flop Man", rarity: "rare", image: "Image_Eugene_Malicieux.png" },
+    { id: 6, name: "Amin sans e Vmax", rarity: "Vmax", image: "Image_Amin_sans_e_Vmax.png" },
+    { id: 7, name: "Ping V Gold", rarity: "Gold", image: "Image_Ping_V_Gold.png" },
 ];
 
 
