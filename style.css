@@ -129,8 +129,8 @@ button:hover {
 }
 
 #boosters img:hover {
-    transform: translateY(-10px) rotate(10deg);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Booster central plus grand */
@@ -289,4 +289,94 @@ button:hover {
 .card img {
     width: 80px;
     height: auto;
+}
+
+
+
+
+
+
+#pokedex-page {
+    padding: 20px;
+    text-align: center;
+}
+
+#pokedex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.pokedex-card {
+    width: 100px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pokedex-card:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pokedex-card img {
+    width: 80px;
+    height: auto;
+}
+
+.pokedex-card.unowned {
+    filter: grayscale(100%);
+    opacity: 0.5;
+}
+
+
+/* Style des compteurs */
+.counter-box {
+    display: inline-block;
+    background-color: #fff; /* Couleur de fond blanche */
+    border-radius: 15px; /* Coins arrondis */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet de relief */
+    padding: 10px 15px; /* Espace interne */
+    margin: 5px; /* Espacement entre les compteurs */
+    font-size: 14px; /* Taille du texte */
+    font-weight: bold; /* Texte en gras */
+    color: #333; /* Texte en gris foncé */
+    text-align: center; /* Centrage horizontal */
+}
+
+#pokedex-counter {
+    background-color: #ffcce5; /* Rose pâle */
+    color: black;
+}
+
+#counters {
+    display: flex;
+    justify-content: center; /* Aligne les compteurs au centre */
+    align-items: center; /* Centrage vertical */
+    gap: 20px; /* Espacement entre les compteurs */
+    margin-bottom: 20px; /* Espacement sous les compteurs */
+}
+
+
+
+#pokedex-header {
+    text-align: center;
+    margin-bottom: 20px; /* Espacement sous le header */
+}
+
+#extension-banner {
+    max-width: 80%; /* Adapte l'image à la largeur de la page */
+    height: auto; /* Garde les proportions */
+    border-radius: 10px; /* Coins arrondis pour un design élégant */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Effet de relief */
 }

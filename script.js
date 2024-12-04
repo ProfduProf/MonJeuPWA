@@ -50,28 +50,78 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-
-
-// Liste des cartes
+// Liste des cartes (même structure que précédemment)
 const cards = [
     { id: 1, name: "Ping", rarity: "commune", image: "Images/Image_Ping.png" },
-    { id: 2, name: "Pong", rarity: "commune", image: "Images/Image_Pong.png" },
-    { id: 3, name: "Ping V", rarity: "V", image: "Images/Image_Ping_V.png" },
-    { id: 4, name: "Ping V Gold", rarity: "Gold", image: "Images/Image_Ping_V_Gold.png" },
-    { id: 5, name: "Salamalek", rarity: "commune", image: "Images/Image_Salamalek.png" },
-    { id: 4, name: "Eugene Malice", rarity: "rare", image: "Images/Image_Eugene_Malicieuxd.png" }
+    { id: 2, name: "Pong", rarity: "commune", image: "Images/Image_Pong.JPG" },
+    { id: 3, name: "Ping V", rarity: "V", image: "Images/Image_Ping_V.JPG" },
+    { id: 4, name: "Salamalek", rarity: "commune", image: "Images/Image_Salamalek.JPG" },
+    { id: 5, name: "Flop Man", rarity: "rare", image: "Images/Image_Eugene_Malicieux.JPG" },
+    { id: 6, name: "Ping V Gold", rarity: "Gold", image: "Images/Image_Ping_V_Gold.JPG" },
 ];
 
-// Fonction pour générer un booster aléatoire (5 cartes)
-function generateBooster() {
-    const shuffled = [...cards].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 5);
+
+
+// Cartes possédées (id des cartes possédées)
+let ownedCards = [1, 2, 3, 4, 5, 6]; // Exemple
+
+
+
+
+// Bouton Pokédex de la home page
+document.getElementById("pokedex-btn").addEventListener("click", () => {
+    document.getElementById("home-page").style.display = "none";
+    document.getElementById("pokedex-page").style.display = "block";
+    displayPokedex();
+});
+
+// Bouton retour
+document.getElementById("back-to-home").addEventListener("click", () => {
+    document.getElementById("pokedex-page").style.display = "none";
+    document.getElementById("home-page").style.display = "block";
+});
+
+
+
+
+
+function displayPokedex() {
+    const pokedexContainer = document.getElementById("pokedex-container");
+    pokedexContainer.innerHTML = ""; // Réinitialise l'affichage
+
+    let ownedCount = 0;
+
+    // Compteurs de rareté
+    const rarityCount = {
+        commune: 0,
+        rare: 0,
+        V: 0,
+        Gold: 0,
+    };
+
+    // Création des cartes
+    cards.forEach(card => {
+        const cardElement = document.createElement("div");
+        cardElement.classList.add("pokedex-card");
+
+        if (ownedCards.includes(card.id)) {
+            cardElement.innerHTML = `<img src="${card.image}" alt="${card.name}"><p>${card.name}</p>`;
+            ownedCount++;
+            rarityCount[card.rarity]++; // Incrémenter la rareté
+        } else {
+            cardElement.classList.add("unowned");
+            cardElement.innerHTML = `<img src="Images/default-card.png" alt="Carte inconnue"><p>???</p>`;
+        }
+
+        pokedexContainer.appendChild(cardElement);
+    });
+
+    // Met à jour les compteurs
+    const pokedexCounter = document.getElementById("pokedex-counter");
+    pokedexCounter.innerText = `${ownedCount} / ${cards.length} `;
+
+    const rarityCounter = document.getElementById("rarity-counter");
+    rarityCounter.innerHTML = Object.entries(rarityCount)
+        .map(([rarity, count]) => `${rarity} : ${count}`)
+        .join(" || ");
 }
-
-// Boosters de départ
-const boosters = {
-    left: generateBooster(),
-    center: generateBooster(),
-    right: generateBooster(),
-};
-
