@@ -97,6 +97,7 @@ function displayPokedex() {
         commune: 0,
         rare: 0,
         V: 0,
+        Vmax:0,
         Gold: 0,
     };
 
