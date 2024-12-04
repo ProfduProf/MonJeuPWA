@@ -57,7 +57,8 @@ const cards = [
     { id: 3, name: "Ping V", rarity: "V", image: "Image_Ping_V.jpg" },
     { id: 4, name: "Salamalek", rarity: "commune", image: "Image_Salamalek.jpg" },
     { id: 5, name: "Flop Man", rarity: "rare", image: "Image_Eugene_Malicieux.jpg" },
-    { id: 6, name: "Ping V Gold", rarity: "Gold", image: "Image_Ping_V_Gold.jpg" },
+    { id: 6, name: "Amin sans e Vmax", rarity: "Vmax", image: "Image_Amin_sans_e_Vmax.jpg" },
+    { id: 7, name: "Ping V Gold", rarity: "Gold", image: "Image_Ping_V_Gold.jpg" },
 ];
 
 
