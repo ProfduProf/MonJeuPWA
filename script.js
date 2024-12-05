@@ -107,7 +107,7 @@ const cards = [
 
 
 // Cartes possédées (id des cartes possédées)
-let ownedCards = [1, 2, 3, 4, 5, 6, 13, 26, 28, 42, 46, 47]; // Exemple
+let ownedCards = [1, 2, 3, 4, 5, 6, 13, 26, 27, 42, 46, 47]; // Exemple
 
 
 
