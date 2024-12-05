@@ -16,7 +16,7 @@
         <p id="intro-text"> </p>
         <p id="intro-text"> </p>
         <p id="intro-text"> </p>
-        <p id="intro-text">ProfduProf présente</p>
+        <p id="intro-text">ProfduProf & Salamalek</p>
         <img id="logo" src="PokESIEE_Logo.png" alt="Logo">
         <button id="login-button">Se connecter</button>
         <button id="signup-button">S'inscrire</button>
@@ -25,8 +25,11 @@
 
     <!-- Home page -->
     <section id="home-page" style="display: none;">
-        <div id="user-icon">
-            <img src="https://via.placeholder.com/50" alt="Icône utilisateur">
+        <div id="user-section">
+            <img id="user-icon" src="path/to/user-icon.png" alt="User Icon">
+            <div id="user-banner">
+                <p id="user-name">Nom d'utilisateur</p>
+            </div>
         </div>
         <div id="boosters">
             <img id="booster-left" src="Image_Booster_Lea.png" alt="Booster gauche">
@@ -34,26 +37,22 @@
             <img id="booster-right" src="Image_Booster_Lea.png" alt="Booster droit">
         </div>
         <div id="booster-controls">
-            <div id="progress-bar">
-                <div id="progress-fill"></div>
-            </div>
-            <button id="action-btn">Accélérer</button>
+            <div id="progress-container">
+                <div id="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <button id="action-btn">Accélérer/Ouvrir</button>
+            </div>            
         </div>
         <div id="menu-buttons">
             <button id="decks-btn">Decks</button>
             <button id="pokedex-btn">Pokédex</button>
-        </div>
+        </div>        
     </section>
     
-
-    
-    <section id="cards-display" style="display: none;">
-        <!-- Les cartes seront insérées ici -->
-    </section>
- 
     
 
-    <!-- Pokedex page -->
+   <!-- Pokedex page -->
 
     <div id="pokedex-page" style="display: none;">
         
@@ -70,10 +69,14 @@
 
         <button id="back-to-home">Retour à la Home</button> <!-- Bouton de retour -->
     </div>
+
+    
     
 
     <script src="script.js"></script>
 </body>
+
+
 </div>
 </div>
 </html>
